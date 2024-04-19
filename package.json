@@ -1,19 +1,28 @@
 {
   "name": "ticket",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/main.js",
-    "start:dev": "nodemon src/main.js"
+    "build": "tsc",
+    "dev": "ts-node ./src/app.ts",
+    "start": "node ./build/app.js"
   },
   "author": "Savlms",
   "license": "MIT",
   "dependencies": {
+    "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
+    "@types/joi": "^17.2.3",
     "@types/mongoose": "^5.11.97",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "mongoose": "^8.3.1"
-  }
+    "joi": "^17.12.3",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2"
+  },
+  "description": ""
 }

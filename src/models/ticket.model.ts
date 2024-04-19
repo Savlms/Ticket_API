@@ -1,7 +1,7 @@
 import { Schema, model, Types } from 'mongoose';
 
 const TicketSchema = new Schema({
-    ticketNumber: {
+    ticketName: {
         type: String,
         unique: true,
         required: true,
@@ -9,11 +9,6 @@ const TicketSchema = new Schema({
     },
     price: {
         type: Number,
-        required: true,
-    },
-    room: {
-        type: Types.ObjectId,
-        ref: 'room',
         required: true,
     },
     status: {
