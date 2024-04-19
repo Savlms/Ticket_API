@@ -7,6 +7,11 @@ const TicketSchema = new Schema({
         required: true,
         trim: true,
     },
+    event: {
+        type: Types.ObjectId,
+        ref: 'event',
+        trim: true
+    },
     price: {
         type: Number,
         required: true,

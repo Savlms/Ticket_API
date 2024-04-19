@@ -5,6 +5,7 @@ import database from './configs/db.configs'
 dotenv.config()
 const port = process.env.PORT
 import ticketRouter from'./routes/ticket.route'
+import eventRouter from './routes/event.route'
 
 
 
@@ -17,6 +18,7 @@ app.get('/', (req, res) => {
 })
 
 app.use("/", ticketRouter)
+app.use("/", eventRouter)
 
 app.listen(port, () => {
     database()
